@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    function check(){
+    var email = document.getElementById("t1").value;    
+    var at  = email.indexOf("@");
+    var dot = email.indexOf(".");
+    var domain = email.substring(dot + 1);
+        
+        t1=t1.value;
+        if(at > 0 && dot > at + 1 && dot < email.length - 1 && domain=="com")
+    {
+        document.write("<h1>Valid Email </h1>");
+    }
+    else{
+        document.write("<h1>Invalid Email </h1>");
+    }
+    }
+</script>
+</head>
+<body>
+    <h1>EMAIL VALIDATOR:</h1>
+    <b>Email: <input type="email" name="t1" id="t1"> <br><br>
+    <input type="button" value="CHECK YOUR EMAIL" onclick="check();"></b>
+
+
+
+    
+</body>
+</html>
