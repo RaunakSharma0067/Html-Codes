@@ -1,0 +1,32 @@
+<html lang="en">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // Click aur MouseOver events handle with .on()
+            $("#box").on({
+                "click": function () {
+                    alert("Click");
+                    $("#box").toggleClass("colour"); // toggle class on click
+                },
+                "mouseout": function () {
+                    alert("MouseOut");
+                }
+            });
+
+        });
+    </script>
+<body>
+    <div id="box"> </div>
+</body>
+<style>
+    #box {
+        width: 300px;
+        height: 200px;
+        background-color: tomato;
+        box-shadow: 20px 20px 50px black;
+        border-radius:25%;
+        margin-left: 500px;
+    }
+</style>
+</html>
